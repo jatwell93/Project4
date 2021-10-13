@@ -19,7 +19,14 @@ public class MoveLeft : MonoBehaviour
     {
         if (playerControllerScript.isGameOver == false)
         {
-            transform.Translate(Vector3.left * Time.deltaTime * speed);
+            if(playerControllerScript.doubleSpeed == true)
+            {
+                transform.Translate(Vector3.left * Time.deltaTime * (speed)*2);
+            } else
+            {
+                transform.Translate(Vector3.left * Time.deltaTime * speed);
+            }
+
         }
 
         if(gameObject.transform.position.x < xBound && gameObject.CompareTag("Obstacle"))

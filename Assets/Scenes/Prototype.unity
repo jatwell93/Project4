@@ -221,6 +221,50 @@ ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1438565936, guid: fb82dfb8d1c7044c69afd2486befecb3, type: 3}
   m_PrefabInstance: {fileID: 1526617274}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &385623611
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 385623613}
+  - component: {fileID: 385623612}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &385623612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385623611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b1e09cb500f00b4592d08f477df564d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerControllerScript: {fileID: 0}
+--- !u!4 &385623613
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385623611}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 17.874218, y: 1.8959355, z: 26.61407}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,7 +574,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6c0aec1d14e3c546a26e37727d6ee1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefabs: {fileID: 4707919980067295876, guid: 4d7d844fe02844a4990a8d1b4d31e620, type: 3}
+  obstaclePrefabs:
+  - {fileID: 6133168958539459381, guid: 0f7dcd78e29245f4a98f6156b14403df, type: 3}
+  - {fileID: 8376300248336714962, guid: 8609f0a5c0d7edf45a025de2b34c9285, type: 3}
+  - {fileID: 4707919980067295876, guid: 4d7d844fe02844a4990a8d1b4d31e620, type: 3}
+  - {fileID: 8292540138867926994, guid: 7f867a68ce1e6834dab0a9473d4141d9, type: 3}
+  - {fileID: 8075748573842164526, guid: cd9697ff14b46ee4a81aa1291b23aa60, type: 3}
   playerControllerScript: {fileID: 0}
 --- !u!4 &1312344147
 Transform:
@@ -715,8 +764,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 450
+  doubleJumpForce: 225
   gravityModifier: 2
   isGameOver: 0
+  doubleSpeed: 0
   explosionParticle: {fileID: 816459990}
   dirtParticle: {fileID: 330344497}
   jumpSound: {fileID: 8300000, guid: 08ab7053d586c458db3774d33c141a4b, type: 3}
